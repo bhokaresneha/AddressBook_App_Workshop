@@ -59,11 +59,27 @@ function validPhoneNumber() {
 }
 
 //save method
-const save = () => {
+const save = (event) => {
     alert("Save button");
+    const data = new FormData(event.target);
+    const formJSON = Object.fromEntries(data.entries());
+    alert(JSON.stringify(formJSON));
+
 }
 
 //reset method
 const resetForm = () => {
     alert("Reset button");
 }
+
+
+   
+    //     const data = new FormData(event.target);
+    //     const formJSON = Object.fromEntries(data.entries());
+      
+    //     // for multi-selects, we need special handling
+    //  //   formJSON.snacks = data.getAll('');
+        
+    //     const results = document.querySelector('.results pre ');
+    // //     results.innerText = JSON.stringify(formJSON, null, 2);
+    // //   }
