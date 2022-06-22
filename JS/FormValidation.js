@@ -58,3 +58,12 @@ function validPhoneNumber() {
     });
 }
 
+//save method
+const save = () => {
+    alert("Save button");
+}
+
+//reset method
+const resetForm = () => {
+    alert("Reset button");
+}
