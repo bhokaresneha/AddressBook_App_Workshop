@@ -1,15 +1,19 @@
 body{
     margin: 0;
     height: 100%;
+    background-color: #F7F7F7;
+    opacity: 1;
+
 }
 
 .header{
+    display: flex;
+
     background-color: white;
     padding: 20px;
 }
 
 .header-content{
-    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -69,4 +73,89 @@ body{
     margin-top: 5px;
     margin-right: 2%;
     border-radius: 15px;
+}
+
+/* uc-3 */
+.form-body {
+    padding: 15px;
+}
+
+.row-content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    border: 0px solid green;
+    margin: 0px auto;
+    width: 100%;
+}
+
+.label-city,
+.label-state,
+.label-zip {
+    width: calc(33% - 20px);
+}
+
+.label-city,
+.label-state {
+    margin-right: 20px;
+}
+
+.label-text-phone {
+    font-size: 16px;
+    color: black;
+    opacity: 1;
+    font-family: Roboto;
+}
+
+.city,.state,.zip {
+    font-size: 16px;
+    color: black;
+    opacity: 1;
+    font-family: Roboto;
+}
+.text {
+    font-size: 16px;
+    color: black;
+    opacity: 1;
+    font-family: Roboto;
+}
+.input {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 30px;
+    font-family: Roboto;
+}
+
+.profie-radio-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-radio-content>label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile {
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+
+select {
+    padding: 12px;
+    border: 1px solid#ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font: normal normal normal 16px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    background-color: transparent;
+    justify-content: space-between;
+    margin-right: 40px;
+    width: 100%;
 }
