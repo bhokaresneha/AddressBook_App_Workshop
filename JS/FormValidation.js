@@ -8,28 +8,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
 function validName() {
     const name = document.querySelector('#name');
     const textError = document.querySelector('.text-error');
-    name.addEventListener('input', function() {
+    name.addEventListener('input', function () {
         if (name.value.length == 0) {
             textError.textContent = "";
             return;
         }
-    //     else{
-    //     const nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
-    //
-    //     if (nameRegex.test(name.value)) {
-    //         textError.textContent = "";
-    //     } else {
-    //         textError.textContent = "Name is incorrect";
-    //     }
-    // }
+        //     else{
+        //     const nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
+        //
+        //     if (nameRegex.test(name.value)) {
+        //         textError.textContent = "";
+        //     } else {
+        //         textError.textContent = "Name is incorrect";
+        //     }
+        // }
 
-    try {
-        (new AddressBook()).name = name.value;
-         textError.textContent = "";
-    } catch (e) {       
-        console.error(e);
-        textError.textContent = e;
-    }
+        try {
+            (new AddressBook()).name = name.value;
+            textError.textContent = "";
+        } catch (e) {
+            console.error(e);
+            textError.textContent = e;
+        }
 
     });
 
@@ -37,7 +37,7 @@ function validName() {
 function validAddress() {
     const address = document.querySelector('#address');
     const addressError = document.querySelector('.address-error');
-    address.addEventListener('input', function() {
+    address.addEventListener('input', function () {
         if (address.value.length == 0) {
             addressError.textContent = "";
             return;
@@ -49,41 +49,41 @@ function validAddress() {
         // } else {
         //     addressError.textContent = "Address is incorrect";
         // }
-         //}
+        //}
         try {
-                (new AddressBook()).address = address.value;
-                addressError.textContent = "";
-            } catch (e) {
-                console.error(e);
-                addressError.textContent = e;
-            }
-    
+            (new AddressBook()).address = address.value;
+            addressError.textContent = "";
+        } catch (e) {
+            console.error(e);
+            addressError.textContent = e;
+        }
+
     });
 }
 function validPhoneNumber() {
     const phoneNumber = document.querySelector('#phone');
     const phoneError = document.querySelector('.phone-error');
-    phoneNumber.addEventListener('input', function() {
+    phoneNumber.addEventListener('input', function () {
         if (phoneNumber.value.length == 0) {
             phoneError.textContent = "";
             return;
         }
-    //     else{
-    //     const phoneRegex = RegExp('^[+][1-9]{2}\\s{0,1}[0-9]{10}$');
-    //     if (phoneRegex.test(phoneNumber.value)) {
-    //         phoneError.textContent = "";
-    //     } else {
-    //         phoneError.textContent = "Phone number is incorrect";
-    //     }
-    // }
+        //     else{
+        //     const phoneRegex = RegExp('^[+][1-9]{2}\\s{0,1}[0-9]{10}$');
+        //     if (phoneRegex.test(phoneNumber.value)) {
+        //         phoneError.textContent = "";
+        //     } else {
+        //         phoneError.textContent = "Phone number is incorrect";
+        //     }
+        // }
 
         try {
-                (new AddressBook()).phoneNumber = phoneNumber.value;
-                phoneError.textContent = "";
-            } catch (e) {
-                console.error(e);
-                phoneError.textContent = e;
-            }
+            (new AddressBook()).phoneNumber = phoneNumber.value;
+            phoneError.textContent = "";
+        } catch (e) {
+            console.error(e);
+            phoneError.textContent = e;
+        }
 
     });
 }
@@ -93,16 +93,15 @@ const save = (event) => {
     // const data = new FormData(event.target);
     // const formJSON = Object.fromEntries(data.entries());
     // alert(JSON.stringify(formJSON));
-    try{
+    try {
         alert("Save Button");
 
-        let addressBookData=createAddressBook();
+        let addressBookData = createAddressBook();
         alert(addressBookData.toString());
         createAndUpdateStorage(addressBookData);
     }
-    catch (e)
-    {
-    return;
+    catch (e) {
+        return;
     }
 
 }
@@ -116,9 +115,9 @@ const createNewId = () => {
 }
 
 //getting all tyhe data from form and storing in addressBook object
-const createAddressBook=()=>{
-   let addressBook=new AddressBook();
-    addressBook.id=createNewId();
+const createAddressBook = () => {
+    let addressBook = new AddressBook();
+    addressBook.id = createNewId();
     try {
         addressBook.name = getInputValueById('#name');
     } catch (e) {
@@ -151,8 +150,14 @@ function createAndUpdateStorage(addressBookData) {
 
 //reset method
 const resetForm = () => {
-        alert("Reset Button");
-       
-    }
+    alert("Reset Button");
+    setValue('#name', '');
+    setValue('#phone', '');
+    setValue('#address', '');
+    setValue('#city', '');
+    setValue('#state', '');
+    setValue('#zipcode', '');
+
+}
 
 

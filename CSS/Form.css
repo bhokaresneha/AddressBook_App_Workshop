@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     height: 100%;
     background-color: #F7F7F7;
@@ -6,34 +6,38 @@ body{
 
 }
 
-.header{
+.header {
     display: flex;
     background-color: white;
     padding: 20px;
 }
 
-.header-content{
+.header-content {
     flex-direction: row;
     justify-content: center;
     align-items: center;
     border: 0.1px solid rgb(238, 250, 238);
 }
-.logo-content{
+
+.logo-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 80%;
 }
-.Address-text{
+
+.Address-text {
     color: blue;
-    font:bold 18px/23px Montserrat;
+    font: bold 18px/23px Montserrat;
     font-family: "Montserrat", sans-serif;
 }
-.Book-text{
+
+.Book-text {
     color: black;
-    font:bold 18px/23px Montserrat;
+    font: bold 18px/23px Montserrat;
     font-family: "Montserrat", sans-serif;
 }
+
 /* uc-2 */
 
 .form-content {
@@ -67,7 +71,8 @@ body{
     border-radius: 7px;
     padding-top: 20px
 }
-.form-header-icon{
+
+.form-header-icon {
     float: right;
     margin-top: 5px;
     margin-right: 2%;
@@ -79,8 +84,9 @@ body{
     margin-bottom: 5px;
     justify-content: center;
     background-color: white;
-    
+
 }
+
 /* uc-3 */
 .form-body {
     padding: 15px;
@@ -105,14 +111,14 @@ body{
 .label-city,
 .label-state,
 .label-zip {
-    width:calc(30% - 10px);
- 
-    
+    width: calc(30% - 10px);
+
+
 }
 
 .label-city,
 .label-state {
-       margin-right:15px;
+    margin-right: 15px;
 }
 
 .label-text-phone {
@@ -122,18 +128,22 @@ body{
     font-family: Roboto;
 }
 
-.city,.state,.zip {
+.city,
+.state,
+.zip {
     font-size: 16px;
     color: black;
     opacity: 1;
     font-family: Roboto;
 }
+
 .text {
     font-size: 16px;
     color: black;
     opacity: 1;
     font-family: Roboto;
 }
+
 .input {
     width: 95%;
     padding: 12px;
@@ -177,23 +187,24 @@ select {
 
 /* UC-4 */
 error-output {
-   float:right;
+    float: right;
     font-size: 12px;
     font-style: italic;
     color: red;
     width: 10%;
 }
+
 /* UC-5 */
 
-.buttonParent{
+.buttonParent {
     display: flex;
     flex-direction: row-reverse;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 
-.submitButton{
-       color: #42515F;
+.submitButton {
+    color: #42515F;
     text-align: center;
     font: normal normal normal 20px/26px Roboto;
     width: 150px;
@@ -204,7 +215,7 @@ error-output {
     opacity: 1;
 }
 
-.resetButton{
+.resetButton {
     margin-left: 50px;
     letter-spacing: 0px;
     color: #42515F;
