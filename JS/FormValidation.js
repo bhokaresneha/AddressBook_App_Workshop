@@ -160,4 +160,9 @@ const resetForm = () => {
 
 }
 
+const setValue = (id, value) => {
+    const element = document.querySelector(id);
+    element.value = value;
+}
+
 
