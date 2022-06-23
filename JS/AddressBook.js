@@ -9,7 +9,7 @@ class AddressBook {
         return this._name;
     }
     set name(name) {
-        let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$')
+        let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}\\s?[A-Z]{1}[a-z]{2,}\\s?[A-Z]{1}[a-z]{2,}$')
         if (nameRegex.test(name))
             this._name=name;
         else
@@ -21,8 +21,8 @@ class AddressBook {
     }
     set phoneNumber(phoneNumber) {
         let phoneRegex= RegExp('^[+]{0,1}[0-9]{2}\\s{0,1}[0-9]{10}$')
-        if (phoneRegex.test(phone))
-            this._phoneNumber=phoneNumber
+        if (phoneRegex.test(phoneNumber))
+            this._phoneNumber=phoneNumber;
         else
             throw "Phonenumber Is Incorrect!"
     }
