@@ -124,7 +124,7 @@ const createAddressBook = () => {
         setTextValue('.text-error', e);
         throw e;
     }
-    addressBook.phone = getInputValueById('#phone');
+    addressBook.phoneNumber = getInputValueById('#phone');
     addressBook.address = getInputValueById('#address');
     addressBook.city = getInputValueById('#city');
     addressBook.state = getInputValueById('#state');
