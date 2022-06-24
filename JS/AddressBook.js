@@ -9,7 +9,7 @@ class AddressBook {
         return this._name;
     }
     set name(name) {
-        let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}\\s?[A-Z]{1}[a-z]{2,}\\s?[A-Z]{1}[a-z]{2,}$')
+        let nameRegex = RegExp('^([A-Z]{1}[a-z]{2,}\\s{0,1})+$')
         if (nameRegex.test(name))
             this._name = name;
         else

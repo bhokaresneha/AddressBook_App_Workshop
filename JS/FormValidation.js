@@ -1,7 +1,11 @@
+let isUpdate = false;
+let employPayrollObject = {};
 window.addEventListener('DOMContentLoaded', (event) => {
     validName();
     validAddress();
     validPhoneNumber();
+    checkForUpdate();
+
 });
 
 
@@ -164,5 +168,27 @@ const setValue = (id, value) => {
     const element = document.querySelector(id);
     element.value = value;
 }
+const setTextValue = (id, value) => {
+    const element = document.querySelector(id); element.textContent = value;
+}
 
+const setAddressBookData = () => {
+    console.log(addressBookObj)
+    setValue('#name',addressBookObj._name);
+    setValue('#address',addressBookObj._address);
+    setValue('#city',addressBookObj._city);
+    setValue('#state',addressBookObj._state);
+    setValue('#phone',addressBookObj._phoneNumber);
+    setValue('#zipcode',addressBookObj._zipCode);
+    alert(addressBookData.toString());
+}
 
+const checkForUpdate =() => {
+    const addressBookJSON = localStorage.getItem('editBook');
+    isUpdate = addressBookJSON ? true : false;
+    if(!isUpdate) return;
+    addressBookObj = JSON.parse(addressBookJSON);
+    // console.log(addressBookJSON)
+    // console.log(addressBookObj);
+    setAddressBookData();
+}

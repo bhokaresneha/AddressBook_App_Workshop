@@ -26,7 +26,7 @@ const createInnerHtml = () => {
                 <td>${addressBookData._phoneNumber}</td>
                 <td>
                     <img id="${addressBookData._id}" onclick="remove(this)" alt="delete" src="/Assets/icons/delete-black-18dp.svg">
-                    <img id="1" alt="edit" onclick="update(this)" src="/Assets/icons/create-black-18dp.svg">
+                    <img id="${addressBookData._id}" alt="edit" onclick="update(this)" src="/Assets/icons/create-black-18dp.svg">
                 </td>
             </tr>
         `;
@@ -46,4 +46,15 @@ const remove = (node) => {
                     addressBookList.splice(index, 1);
     localStorage.setItem('AddressBookList', JSON.stringify(addressBookList));
     createInnerHtml();
+}
+
+const update = (node) => {
+    let addressBookData = addressBookList.find(bookData => bookData._id == node.id);
+    if(!addressBookData)
+    { 
+        return;
+    }
+    localStorage.setItem('editBook', JSON.stringify(addressBookData));
+    window.location.replace(site_properties.add_emp_Payroll_page);
+    
 }
